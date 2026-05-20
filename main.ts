@@ -1,5 +1,4 @@
 let lineSensors: sensors.NXTLightSensor[] = [sensors.nxtLight1, sensors.nxtLight2, sensors.nxtLight3, sensors.nxtLight4]; // Массив всех портов датчиков отражения nxt
-// let lineSensors: sensors.ColorSensor[] = [sensors.color1, sensors.color2, sensors.color3, sensors.color4]; // Массив всех портов датчиков цвета
 
 let fileName = "ref_raw_line_sensor.txt"; // Имя временного файла записи медианных значений
 
@@ -17,7 +16,6 @@ function Main() {
     while (true) {
         for (let i = 0; i < 4; i++) { // Считываем сырые значения отражения с датчика
             refRaw[i] = lineSensors[i].light(NXTLightIntensityMode.ReflectedRaw);
-            // refRaw[i] = lineSensors[i].light(LightIntensityMode.ReflectedRaw);
         }
 
         if (state == State.ShowValues && brick.buttonEnter.isPressed()) {
@@ -53,8 +51,8 @@ function Main() {
         brick.clearScreen(); // Выводим на экран
         for (let i = 0; i < 4; i++) brick.showValue("refRawPort" + (i + 1), refRaw[i], i + 1);
         if (state == State.ShowValues) {
-            brick.printString("Press ENTER to search", 6);
-            brick.printString("median values", 7);
+            brick.printString("Press ENTER to search", 11);
+            brick.printString("median values", 12);
         } else if (state == State.Search) {
             brick.printString("Press UP to save white", 6);
             brick.printString("Press DOWN to save black", 7);
