@@ -3,20 +3,22 @@ const lineSensors: sensors.NXTLightSensor[] = [sensors.nxtLight1, sensors.nxtLig
 const fileName = "ref_raw_nxt_light_sensors.txt"; // Имя временного файла записи медианных значений
 
 function Main() {
-    let state = State.ShowValues;
+    let state = State.ShowValues; // Состояние конечного автомата
 
     let refRaw: number[] = [0, 0, 0, 0]; // Массив для хранения сырых значений отражения с датчика
 
     let whiteRefRawValues: number[][] = [[], [], [], []]; // Массив для хранения сырых значений на белом
     let blackRefRawValues: number[][] = [[], [], [], []]; // Массив для хранения сырых значений на чёрном
 
-    let whiteRefRawMedianValues: number[] = [0, 0, 0, 0];
-    let blackRefRawMedianValues: number[] = [0, 0, 0, 0];
+    let whiteRefRawMedianValues: number[] = [0, 0, 0, 0]; // Массивы хранения медианных значений для белого
+    let blackRefRawMedianValues: number[] = [0, 0, 0, 0]; // Массивы хранения медианных значений для чёрного
     
     while (true) {
         for (let i = 0; i < 4; i++) { // Считываем сырые значения отражения с датчика
             refRaw[i] = lineSensors[i].light(NXTLightIntensityMode.ReflectedRaw);
         }
+
+        let pauseMs = 10; // Пауза для цикла, установить значение по умолчанию
 
         if (state == State.ShowValues && brick.buttonEnter.isPressed()) {
             state = State.Waiting;
@@ -54,24 +56,27 @@ function Main() {
             brick.printString("Press ENTER to search", 11);
             brick.printString("median values", 12);
         } else if (state == State.Search) {
-            brick.printString("Press UP to save white", 6);
-            brick.printString("Press DOWN to save black", 7);
+            brick.printString("Press UP to save WHITE", 6);
+            brick.printString("Press DOWN to save BLACK", 7);
             brick.printString("Press ENTER to calculate", 9);
             brick.printString("median values", 10);
         } else if (state == State.SaveWhiteRefRaw) {
             brick.printString("Saved to White!", 6);
+            pauseMs = 500;
         } else if (state == State.SaveBlackRefRaw) {
             brick.printString("Saved to Black!", 6);
+            pauseMs = 500;
         } else if (state == State.CalculateMedian) {
             brick.printString("Processing...", 9);
+            pauseMs = 300;
         } else if (state == State.CalculationCompleted) {
-            brick.printString("White medians: ", 7);
+            brick.printString("WHITE medians: ", 7);
             brick.printString(whiteRefRawMedianValues.join(', '), 8);
-            brick.printString("Black medians: ", 10);
+            brick.printString("BLACK medians: ", 10);
             brick.printString(blackRefRawMedianValues.join(', '), 11);
         }
 
-        loops.pause(10); // Небольшая задержка для стабильности
+        loops.pause(pauseMs); // Небольшая задержка для стабильности
     }
 }
 
