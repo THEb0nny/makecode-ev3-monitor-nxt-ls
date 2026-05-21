@@ -1,5 +1,5 @@
 
-> Открыть эту страницу в [https://theb0nny.github.io/makecode-ev3-search-max-min-ref-raw-nxt-ref-sensor-monitor/](https://theb0nny.github.io/makecode-ev3-search-max-min-ref-raw-nxt-ref-sensor-monitor/)
+> Открыть эту страницу в [https://theb0nny.github.io/makecode-ev3-monitor-nxt-ls/](https://theb0nny.github.io/makecode-ev3-monitor-nxt-lsr/)
 
 ## Использовать это расширение
 
@@ -8,7 +8,7 @@
 * открыть [https://makecode.mindstorms.com/](https://makecode.mindstorms.com/)
 * нажмите на **Новый проект**
 * нажмите **Расширения** в меню-шестерёнке
-* найдите **https://github.com/theb0nny/makecode-ev3-search-max-min-ref-raw-nxt-ref-sensor-monitor** и импортируйте
+* найдите **https://github.com/theb0nny/makecode-ev3-monitor-nxt-ls** и импортируйте
 
 ## Править этот проект
 
@@ -16,7 +16,7 @@
 
 * открыть [https://makecode.mindstorms.com/](https://makecode.mindstorms.com/)
 * нажмите на **Импорт**, затем **Импорт URL**
-* вставьте **https://github.com/theb0nny/makecode-ev3-search-max-min-ref-raw-nxt-ref-sensor-monitor** и нажмите Импорт
+* вставьте **https://github.com/theb0nny/makecode-ev3-monitor-nxt-ls** и нажмите Импорт
 
 #### Метаданные (используются для поиска, рендеринга)
 
@@ -25,7 +25,7 @@
 
 
 
-> Открыть эту страницу в [https://theb0nny.github.io/makecode-ref-raw-nxt-ls-monitor/](https://theb0nny.github.io/makecode-ref-raw-nxt-ls-monitor/)
+> Открыть эту страницу в [https://theb0nny.github.io/makecode-ev3-monitor-nxt-ls/](https://theb0nny.github.io/makecode-ev3-monitor-nxt-ls/)
 
 ## Использовать это расширение
 
@@ -42,7 +42,7 @@
 
 * открыть [https://makecode.mindstorms.com/](https://makecode.mindstorms.com/)
 * нажмите на **Импорт**, затем **Импорт URL**
-* вставьте **https://github.com/theb0nny/makecode-ref-raw-nxt-ls-monitor** и нажмите Импорт
+* вставьте **https://github.com/theb0nny/makecode-ev3-monitor-nxt-ls** и нажмите Импорт
 
 #### Метаданные (используются для поиска, рендеринга)
 
