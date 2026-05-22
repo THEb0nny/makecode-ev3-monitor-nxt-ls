@@ -62,10 +62,10 @@ function Main() {
             brick.printString("median values", 10);
         } else if (state == State.SaveWhiteRefRaw) {
             brick.printString("Saved to White!", 6);
-            pauseMs = 500;
+            pauseMs = 300;
         } else if (state == State.SaveBlackRefRaw) {
             brick.printString("Saved to Black!", 6);
-            pauseMs = 500;
+            pauseMs = 300;
         } else if (state == State.CalculateMedian) {
             brick.printString("Processing...", 9);
             pauseMs = 300;
