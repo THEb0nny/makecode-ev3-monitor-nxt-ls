@@ -1,6 +1,6 @@
 const lineSensors: sensors.NXTLightSensor[] = [sensors.nxtLight1, sensors.nxtLight2, sensors.nxtLight3, sensors.nxtLight4]; // Массив всех портов датчиков отражения nxt
 
-const fileName = "ref_raw_nxt_ls.rtf"; // Имя временного файла записи медианных значений
+const fileName = "nxt_ls_ref_raw.rtf"; // Имя временного файла записи медианных значений
 
 function Main() {
     let state = State.ShowValues; // Состояние конечного автомата
