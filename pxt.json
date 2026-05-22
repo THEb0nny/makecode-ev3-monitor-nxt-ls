@@ -19,7 +19,7 @@
         "branch": "v1.2.26",
         "tag": "v1.2.26",
         "commits": "https://github.com/microsoft/pxt-ev3/commits/c8381d76262186898db1fa1922cdbd3255ebbcd3",
-        "target": "1.4.1042-172-gb6b2e5c",
+        "target": "1.4.1042-178-ga7a9f3f",
         "pxt": "4.0.11",
         "targetId": "ev3"
     },
