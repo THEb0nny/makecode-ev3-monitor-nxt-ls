@@ -1,6 +1,6 @@
 {
     "name": "Monitor_NXT_LS",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "description": "",
     "dependencies": {
         "ev3": "*",
