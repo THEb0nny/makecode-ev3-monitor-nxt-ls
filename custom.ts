@@ -8,7 +8,7 @@ const enum State {
     CalculationCompleted
 }
 
-function calculateMedian(numbers: number[]): number {
+function median(numbers: number[]): number {
     if (numbers.length === 0) return null;
     numbers = numbers.sort((a, b) => a - b);
     const half = Math.floor(numbers.length / 2);

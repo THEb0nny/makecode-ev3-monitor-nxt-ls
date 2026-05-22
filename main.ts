@@ -37,8 +37,8 @@ function Main() {
         } else if (state == State.Search && brick.buttonEnter.isPressed()) {
             state = State.CalculateMedian;
             for (let i = 0; i < 4; i++) {
-                whiteRefRawMedianValues[i] = calculateMedian(whiteRefRawValues[i]);
-                blackRefRawMedianValues[i] = calculateMedian(blackRefRawValues[i]);
+                whiteRefRawMedianValues[i] = median(whiteRefRawValues[i]);
+                blackRefRawMedianValues[i] = median(blackRefRawValues[i]);
             }
             storage.temporary.remove(fileName); // Удалить файл с таким же именем
             storage.temporary.limit(fileName, 0); // Установить лимит размера файла
