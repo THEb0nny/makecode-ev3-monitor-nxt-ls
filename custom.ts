@@ -5,7 +5,8 @@ const enum State {
     WaitCalibrationStart,
     Calibration,
     Completed,
-    FinalResults
+    FinalResults,
+    SaveCompleted
 }
 
 function median(numbers: number[]): number {
