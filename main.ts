@@ -8,13 +8,6 @@ const enum State {
     CalculationCompleted
 }
 
-function median(numbers: number[]): number {
-    if (numbers.length === 0) return null;
-    numbers = numbers.sort((a, b) => a - b);
-    const half = Math.floor(numbers.length / 2);
-    return numbers.length % 2 ? numbers[half] : Math.round((numbers[half - 1] + numbers[half]) / 2);
-}
-
 const lineSensors: sensors.NXTLightSensor[] = [sensors.nxtLight1, sensors.nxtLight2, sensors.nxtLight3, sensors.nxtLight4]; // Массив всех портов датчиков отражения nxt
 
 const fileName = "nxt_ls_ref_raw.rtf"; // Имя временного файла записи медианных значений
@@ -28,6 +21,13 @@ let blackRefRawValues: number[][] = [[], [], [], []]; // Массив для х�
 
 let whiteRefRawMedianValues: number[] = [0, 0, 0, 0]; // Массивы хранения медианных значений для белого
 let blackRefRawMedianValues: number[] = [0, 0, 0, 0]; // Массивы хранения медианных значений для чёрного
+
+function median(numbers: number[]): number {
+    if (numbers.length === 0) return null;
+    numbers = numbers.sort((a, b) => a - b);
+    const half = Math.floor(numbers.length / 2);
+    return numbers.length % 2 ? numbers[half] : Math.round((numbers[half - 1] + numbers[half]) / 2);
+}
 
 forever(function() {
     for (let i = 0; i < 4; i++) { // Считываем сырые значения отражения с датчика
