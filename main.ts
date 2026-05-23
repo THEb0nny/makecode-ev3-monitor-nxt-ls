@@ -133,7 +133,7 @@ forever(function() {
             brick.printString("Водите робота по линии", 8);
             brick.printString("Нажмите ENTER для завершения", 9);
         } else if (state == State.Completed) {
-            brick.printString(`ПРОХОД ${calibrationCount} завершён!`, 6);
+            brick.printString(`Проход ${calibrationCount} ЗАВЕРШЁН`, 6);
             brick.printString("ВВЕРХ для нового прохода", 8);
             brick.printString("ENTER для завершения калиб-ки", 9);
             brick.printString("Б: " + whiteMedian.join(", "), 11);
