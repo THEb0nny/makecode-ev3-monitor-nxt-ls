@@ -9,11 +9,10 @@
     },
     "files": [
         "main.ts",
-        "README.md"
+        "README.md",
+        "custom.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "testFiles": [],
     "targetVersions": {
         "branch": "v1.2.26",
         "tag": "v1.2.26",
