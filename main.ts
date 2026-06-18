@@ -124,11 +124,11 @@ forever(function () {
 
     // Сохранение
     if (state == State.FinalResults && brick.buttonDown.wasPressed()) {
-        storage.permanent.remove(fileName);
-        storage.permanent.appendLine(fileName, "WHITE");
-        storage.permanent.appendLine(fileName, finalWhite.join(","));
-        storage.permanent.appendLine(fileName, "BLACK");
-        storage.permanent.appendLine(fileName, finalBlack.join(","));
+        storage.internal.remove(fileName);
+        storage.internal.appendLine(fileName, "WHITE");
+        storage.internal.appendLine(fileName, finalWhite.join(","));
+        storage.internal.appendLine(fileName, "BLACK");
+        storage.internal.appendLine(fileName, finalBlack.join(","));
         state = State.SaveCompleted;
     }
 
